@@ -1,0 +1,242 @@
+/*#region reset*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+ul ,a{
+    list-style: none;
+    text-decoration: none;
+}
+/*#endregion reset*/
+
+/*#region root*/
+:root{
+    /*color*/
+    --Text-and-Main-Gray:#7EDAD2;
+    --Text-and-Main-Black:#424241;
+    --Text-and-Main-White: #FAFAFA;
+    --Text-and-Main-Gray-2: #909090;
+    --Text-and-Main-Dark-Purple:#5D4D66
+}
+/*#endregion root*/
+
+/*#region container*/
+.container{
+    max-width: 1275px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*#endregion container*/
+
+/*region header*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+.ul-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+}
+.li-nav a{
+    color: var(--Text-and-Main-Black);
+    font-size: 18px;
+    font-weight: 400;
+}
+button{
+    display: none;
+}
+/*#endregion header*/
+
+/*#region first div*/
+.main{
+    display: flex;
+    position: relative;
+    /* gap: 15px; */
+}
+.col-6{
+    width: calc(100% / 12* 6);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+.h1{
+    font-size: 90px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    color: var(--Text-and-Main-Black);
+}
+.h1 span{
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--Text-and-Main-Gray);
+}
+.p-smart{
+    font-size: 17px;
+    font-weight: 400;
+    width: 72%;
+    color:var(--Text-and-Main-Gray-2)
+}
+.a-smart{
+    padding: 15px 13px;
+    background-color: var(--Text-and-Main-Gray);
+    color: var(--Text-and-Main-White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    font-size: 15px;
+}
+.smart{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.smart-btm{
+    display: flex;
+    gap: 40px;
+    width: 80%;
+}
+.col-4{
+    width: calc(100%/12*4);
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sp-num{
+    font-size: 45px;
+    font-weight: 400;
+    color: var(--Text-and-Main-Black);
+    font-family: "Bebas Neue", sans-serif;
+}
+.sp-p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--Text-and-Main-Gray-2);
+
+}
+/*#endregion first div*/
+
+.man{
+    width: 100%;
+}
+/* .sec-div{
+    position: relative;
+} */
+.image::before{
+    content: "";
+    background-image: url(../img/background.svg);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    top: -46;
+} 
+.card{
+    display: flex;
+    padding: 15px;
+    width: 45%;
+    align-items: center;
+    gap: 32px;
+    background-color: var(--Text-and-Main-White);
+    position: absolute;
+    bottom: 155px;
+    left: 348px;
+}
+.p-card{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Text-and-Main-Gray-2);
+}
+.p-card span{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--Text-and-Main-Black);
+}
+.btm{
+    display: flex;
+    gap: 20px;
+    padding: 32px;
+}
+.col-3{
+    width: calc(100%/12*3);
+}
+h2{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--Text-and-Main-Black);
+}
+.col-3 p{
+    font-size: 18;
+    font-weight: 400;
+    color: var(--Text-and-Main-Gray-2);
+}
+.report{
+    position: absolute;
+    top: 292px;
+    left: 292px;
+
+}
+
+@media (max-width:900px){
+    .main{flex-direction: column;
+    align-items: center;
+}
+.nav-bar{
+    display: none;
+}
+.header{
+    justify-content: space-around !important;
+}
+.col-6{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.smart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-smart{width: 100%;}
+.nav-bar{
+    display: none;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: white;
+    border: white;
+}
+button img{
+    width: 40px;
+}
+.card{
+    bottom: 68px;
+    left: 245px;
+}
+.report{
+    top: 211px;
+    left: 190px;
+}
+}
